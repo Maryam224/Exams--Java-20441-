@@ -1,18 +1,22 @@
-package poly2021A;
+package Poly2020A87;
 
-public abstract class A {
-	
-	protected int _x;
-	
+public class A {
+	private int _val;
 	public A() {
-		_x=1;
+		_val=1;
 	}
-	public abstract int f(int x);
-	
-	public void f(A a) {
-		_x=a._x;
+	public A(int val) {
+		_val=val;
 	}
-	//added
-	public int getX() {return _x;}
+	public int getVal() {
+		return _val;
+	}
+	public boolean equals(Object other) {
+		System.out.println("AObject");
+		if(other instanceof A)
+			return (_val==((A)other)._val);
+		return false;
+	}
+	//----------------------------------------
 
 }
